@@ -14,6 +14,7 @@ def program():
         user = "root",
         password = "4JVkrk75Jamd"
         )
+        
         cursor = mydb.cursor()
         sql = "insert into stock (serial_number, item_name, item_status) values (%s,%s,%s)"
         val = (serial_number, item_name, item_status)
@@ -42,7 +43,7 @@ def program():
     e3 = tk.Entry(root)
     e3.place(x = 140, y = 130)
 
-
+    b1 = tk.Button(root, text = "Add", command = add, height=1, width=12).place(x = 30, y = 210)
 
 
     root.mainloop()
